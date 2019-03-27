@@ -1,0 +1,51 @@
+{
+    "name": "overtrue/laravel-options",
+    "description": "Global options module for Laravel application.",
+    "keywords": [
+        "overtrue",
+        "settings",
+        "laravel-options"
+    ],
+    "homepage": "https://github.com/overtrue/laravel-options",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "overtrue",
+            "email": "anzhengchao@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "laravel/framework": "~5.5"
+    },
+    "require-dev": {
+        "orchestra/database": "^3.8",
+        "orchestra/testbench": "~3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Overtrue\\LaravelOptions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Overtrue\\LaravelOptions\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\LaravelOptions\\OptionsServiceProvider"
+            ],
+            "aliases": {
+                "Option": "Overtrue\\LaravelOptions\\Facade"
+            }
+        }
+    }
+}

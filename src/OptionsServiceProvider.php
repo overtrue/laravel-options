@@ -1,0 +1,51 @@
+<?php
+
+/*
+ * This file is part of the overtrue/laravel-options.
+ *
+ * (c) overtrue <anzhengchao@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
+namespace Overtrue\LaravelOptions;
+
+use Illuminate\Support\ServiceProvider;
+
+/**
+ * Class OptionsServiceProvider.
+ */
+class OptionsServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap the application services.
+     */
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'laravel-options-migrations');
+
+            $this->publishes([
+                __DIR__.'/../config/options.php' => \config_path('options.php'),
+            ], 'laravel-options-config');
+
+            $this->commands([
+                \Overtrue\LaravelOptions\Console\Commands\SetOption::class,
+            ], 'laravel-options-commands');
+        }
+
+        $this->mergeConfigFrom(__DIR__.'/../config/options.php', 'options');
+    }
+
+    /**
+     * Register the application services.
+     */
+    public function register()
+    {
+        $this->app->singleton('laravel-options', function ($app) {
+            return new OptionsManager($app);
+        });
+    }
+}

@@ -37,12 +37,12 @@ $ php artisan migrate
 // get
 \Option::get('foo'); // bar
 \Option::get(['foo', 'bar']); // ['foo' => 'bar', 'bar' => 'baz']
-\Option::getAll(['foo', 'bar']); // ['foo' => 'bar', 'bar' => 'baz']
+\Option::all(['foo', 'bar']); // ['foo' => 'bar', 'bar' => 'baz']
 
 // get all
 \Option::get();
 // or
-\Option::getAll();
+\Option::all();
 
 // check exists
 \Option::has('foo'); // true

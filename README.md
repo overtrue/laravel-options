@@ -59,6 +59,15 @@ It is also possible to set options within the console:
 php artisan option:set {key} {value}
 ```
 
+### Events
+
+- `\Overtrue\LaravelOptions\Events\OptionCreated::class`
+- `\Overtrue\LaravelOptions\Events\OptionUpdated::class`
+- `\Overtrue\LaravelOptions\Events\OptionSaved::class`
+- `\Overtrue\LaravelOptions\Events\OptionDeleted::class`
+- `\Overtrue\LaravelOptions\Events\OptionRetrieved::class`
+- `\Overtrue\LaravelOptions\Events\Event::class`
+
 ## Testing
 
 ```bash

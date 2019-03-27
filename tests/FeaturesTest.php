@@ -10,6 +10,7 @@
 
 namespace Overtrue\LaravelOptions\Test;
 
+use Illuminate\Support\Facades\Event;
 use Overtrue\LaravelOptions\OptionsManager;
 
 class FeaturesTest extends TestCase
@@ -29,6 +30,27 @@ class FeaturesTest extends TestCase
         $this->assertDatabaseHas('options', ['key' => 'foo', 'value' => '"bar"']);
         $this->assertDatabaseHas('options', ['key' => 'bar', 'value' => '"baz"']);
         $this->assertDatabaseHas('options', ['key' => 'name', 'value' => '"laravel-options"']);
+    }
+
+    /** @test */
+    public function it_will_trigger_events()
+    {
+        Event::fake();
+
+        \Option::set('foo', 'bar');
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionCreated::class);
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionSaved::class);
+
+        \Option::set('foo', 'new-value');
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionUpdated::class);
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionSaved::class);
+
+        \Option::get('foo');
+        \Option::all();
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionRetrieved::class, 3);
+
+        \Option::remove('foo');
+        Event::assertDispatched(\Overtrue\LaravelOptions\Events\OptionDeleted::class);
     }
 
     /** @test */

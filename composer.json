@@ -19,7 +19,7 @@
         "laravel/framework": "~5.5||~6.0||~7.0"
     },
     "require-dev": {
-        "orchestra/database": "^3.8",
+        "orchestra/database": "^4.3",
         "orchestra/testbench": "~3.8"
     },
     "autoload": {

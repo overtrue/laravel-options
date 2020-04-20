@@ -1,9 +1,9 @@
 # Laravel Options
 
-[![Build Status](https://img.shields.io/travis/overtrue/laravel-options/master.svg?style=flat-square)](https://travis-ci.org/overtrue/laravel-options)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/overtrue/laravel-options.svg?style=flat-square)](https://packagist.org/packages/overtrue/laravel-options)
 [![Total Downloads](https://img.shields.io/packagist/dt/overtrue/laravel-options.svg?style=flat-square)](https://packagist.org/packages/overtrue/laravel-options)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+![CI](https://github.com/overtrue/laravel-options/workflows/CI/badge.svg)
 
 Global options module for Laravel application.
 

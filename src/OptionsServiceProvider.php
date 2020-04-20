@@ -1,11 +1,12 @@
 <?php
 
 /*
- * This file is part of the overtrue/laravel-options.
+ * This file is part of the overtrue/laravel-options
  *
- * (c) overtrue <anzhengchao@gmail.com>
+ * (c) overtrue <i@overtrue.me>
  *
- * This source file is subject to the MIT license that is bundled.
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Overtrue\LaravelOptions;
@@ -24,11 +25,11 @@ class OptionsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../database/migrations' => database_path('migrations'),
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
             ], 'laravel-options-migrations');
 
             $this->publishes([
-                __DIR__.'/../config/options.php' => \config_path('options.php'),
+                __DIR__ . '/../config/options.php' => \config_path('options.php'),
             ], 'laravel-options-config');
 
             $this->commands([
@@ -36,7 +37,7 @@ class OptionsServiceProvider extends ServiceProvider
             ], 'laravel-options-commands');
         }
 
-        $this->mergeConfigFrom(__DIR__.'/../config/options.php', 'options');
+        $this->mergeConfigFrom(__DIR__ . '/../config/options.php', 'options');
     }
 
     /**

@@ -22,7 +22,7 @@
         "laravel/framework": "^6.18",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "~8.0",
-        "orchestra/testbench": "^3.8",
+        "orchestra/testbench": "^4.7",
         "brainmaestro/composer-git-hooks": "^2.7",
         "friendsofphp/php-cs-fixer": "^2.16"
     },

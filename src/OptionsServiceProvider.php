@@ -12,6 +12,7 @@
 namespace Overtrue\LaravelOptions;
 
 use Illuminate\Support\ServiceProvider;
+use Overtrue\LaravelOptions\Console\Commands\SetOption;
 
 /**
  * Class OptionsServiceProvider.
@@ -33,7 +34,7 @@ class OptionsServiceProvider extends ServiceProvider
             ], 'laravel-options-config');
 
             $this->commands([
-                \Overtrue\LaravelOptions\Console\Commands\SetOption::class,
+                SetOption::class,
             ], 'laravel-options-commands');
         }
 
@@ -45,7 +46,7 @@ class OptionsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('laravel-options', function ($app) {
+        $this->app->bind('laravel-options', function ($app) {
             return new OptionsManager($app);
         });
     }

@@ -1,11 +1,11 @@
 # Laravel Options
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/overtrue/laravel-options.svg?style=flat-square)](https://packagist.org/packages/overtrue/laravel-options)
-[![Total Downloads](https://img.shields.io/packagist/dt/overtrue/laravel-options.svg?style=flat-square)](https://packagist.org/packages/overtrue/laravel-options)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-![CI](https://github.com/overtrue/laravel-options/workflows/CI/badge.svg)
-
 Global options module for Laravel application.
+
+![Laravel Octane Ready Status](https://img.shields.io/badge/Octance-ready-green?style=flat-square)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/overtrue/laravel-options?style=flat-square)
+![GitHub License](https://img.shields.io/github/license/overtrue/laravel-options?style=flat-square)
+![Packagist Downloads](https://img.shields.io/packagist/dt/overtrue/laravel-options?style=flat-square)
 
 [![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
 

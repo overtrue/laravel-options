@@ -14,7 +14,7 @@ Global options module for Laravel application.
 You can install the package via composer:
 
 ```bash
-composer require overtrue/laravel-options -vvv
+composer require overtrue/laravel-options
 ```
 
 ### Publish configuration and migrations
@@ -49,7 +49,7 @@ $ php artisan migrate
 // check exists
 \Option::has('foo'); // true
 
-\Option::remove('foo'); 
+\Option::remove('foo');
 \Option::remove(['foo', 'bar']);
 ```
 
@@ -63,12 +63,12 @@ php artisan option:set {key} {value}
 
 ### Events
 
-- `\Overtrue\LaravelOptions\Events\OptionCreated::class`
-- `\Overtrue\LaravelOptions\Events\OptionUpdated::class`
-- `\Overtrue\LaravelOptions\Events\OptionSaved::class`
-- `\Overtrue\LaravelOptions\Events\OptionDeleted::class`
-- `\Overtrue\LaravelOptions\Events\OptionRetrieved::class`
-- `\Overtrue\LaravelOptions\Events\Event::class`
+-   `\Overtrue\LaravelOptions\Events\OptionCreated::class`
+-   `\Overtrue\LaravelOptions\Events\OptionUpdated::class`
+-   `\Overtrue\LaravelOptions\Events\OptionSaved::class`
+-   `\Overtrue\LaravelOptions\Events\OptionDeleted::class`
+-   `\Overtrue\LaravelOptions\Events\OptionRetrieved::class`
+-   `\Overtrue\LaravelOptions\Events\Event::class`
 
 ## Testing
 
@@ -76,7 +76,7 @@ php artisan option:set {key} {value}
 $ composer test
 ```
 
-## :heart: Sponsor me 
+## :heart: Sponsor me
 
 [![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me.svg?raw=true)](https://github.com/sponsors/overtrue)
 
@@ -87,7 +87,6 @@ $ composer test
 Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.
 
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/overtrue)
-
 
 ## Contributing
 

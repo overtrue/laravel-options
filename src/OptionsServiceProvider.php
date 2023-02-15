@@ -11,11 +11,11 @@ class OptionsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../database/migrations' => database_path('migrations'),
+                __DIR__.'/../database/migrations' => database_path('migrations'),
             ], 'laravel-options-migrations');
 
             $this->publishes([
-                __DIR__ . '/../config/options.php' => \config_path('options.php'),
+                __DIR__.'/../config/options.php' => \config_path('options.php'),
             ], 'laravel-options-config');
 
             $this->commands([
@@ -23,7 +23,7 @@ class OptionsServiceProvider extends ServiceProvider
             ], 'laravel-options-commands');
         }
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/options.php', 'options');
+        $this->mergeConfigFrom(__DIR__.'/../config/options.php', 'options');
     }
 
     public function register()

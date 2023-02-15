@@ -10,7 +10,6 @@ class OptionsManager implements \Overtrue\LaravelOptions\Contracts\Option
 
     protected $providers = [];
 
-
     public function __construct(protected Application $app)
     {
     }

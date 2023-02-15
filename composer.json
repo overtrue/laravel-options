@@ -15,13 +15,14 @@
         }
     ],
     "require": {
-        "laravel/framework": "^9.0"
+        "laravel/framework": "^9.0|^10.0"
     },
     "require-dev": {
+        "brainmaestro/composer-git-hooks": "dev-master",
+        "laravel/pint": "*",
         "mockery/mockery": "^1.4",
-        "phpunit/phpunit": "^9.5",
-        "orchestra/testbench": "^7.0",
-        "friendsofphp/php-cs-fixer": "^3.3"
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
@@ -66,8 +67,8 @@
             "cghooks update"
         ],
         "cghooks": "vendor/bin/cghooks",
-        "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
-        "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
+        "check-style": "vendor/bin/pint --test",
+        "fix-style": "vendor/bin/pint",
         "test": "vendor/bin/phpunit --colors=always"
     },
     "scripts-descriptions": {

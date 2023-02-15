@@ -18,7 +18,7 @@ class EloquentProvider implements OptionProvider
 
     public function getAll(array $keys = []): array
     {
-        return $this->option->when(!empty($keys), function ($query) use ($keys) {
+        return $this->option->when(! empty($keys), function ($query) use ($keys) {
             $query->whereIn('key', $keys);
         })->pluck('value', 'key')->toArray();
     }

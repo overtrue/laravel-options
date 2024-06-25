@@ -21,7 +21,7 @@
         "brainmaestro/composer-git-hooks": "dev-master",
         "laravel/pint": "*",
         "mockery/mockery": "^1.4",
-        "orchestra/testbench": "^8.0",
+        "orchestra/testbench": "^9.1",
         "phpunit/phpunit": "^10.0"
     },
     "autoload": {

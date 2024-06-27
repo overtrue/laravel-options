@@ -22,7 +22,7 @@
         "laravel/pint": "*",
         "mockery/mockery": "^1.4",
         "orchestra/testbench": "^9.1",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^11.1"
     },
     "autoload": {
         "psr-4": {

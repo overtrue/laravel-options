@@ -15,14 +15,15 @@
         }
     ],
     "require": {
-        "laravel/framework": "^9.0|^10.0|^11.0"
+        "php": "^8.3",
+        "laravel/framework": "^13.0"
     },
     "require-dev": {
-        "brainmaestro/composer-git-hooks": "dev-master",
-        "laravel/pint": "*",
-        "mockery/mockery": "^1.4",
-        "orchestra/testbench": "^9.1",
-        "phpunit/phpunit": "^10.0"
+        "brainmaestro/composer-git-hooks": "^3.0",
+        "laravel/pint": "^1.27",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.5"
     },
     "autoload": {
         "psr-4": {

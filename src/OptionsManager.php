@@ -3,18 +3,17 @@
 namespace Overtrue\LaravelOptions;
 
 use Illuminate\Contracts\Foundation\Application;
+use Overtrue\LaravelOptions\Contracts\Option;
 
-class OptionsManager implements \Overtrue\LaravelOptions\Contracts\Option
+class OptionsManager implements Option
 {
     use CreatesOptionProvider;
 
     protected $providers = [];
 
-    public function __construct(protected Application $app)
-    {
-    }
+    public function __construct(protected Application $app) {}
 
-    public function provider(string $name = null)
+    public function provider(?string $name = null)
     {
         $name = $name ?: $this->getDefaultProvider();
 
@@ -43,8 +42,8 @@ class OptionsManager implements \Overtrue\LaravelOptions\Contracts\Option
 
     public function get($key = null, $default = null)
     {
-        if (empty($key) || \is_array($key)) {
-            return $this->provider()->getAll($key);
+        if ($key === null || \is_array($key)) {
+            return $this->provider()->getAll($key ?? []);
         }
 
         return $this->provider()->get($key, $default) ?? $default;

@@ -9,12 +9,18 @@ Global options module for Laravel application.
 
 [![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
 
+## Requirements
+
+Version 4 requires PHP 8.3 or newer and Laravel 13.x. Applications using Laravel 9–11 should remain on the 3.x release line.
+
+See [UPGRADE.md](UPGRADE.md) when upgrading from 3.x.
+
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require overtrue/laravel-options
+composer require overtrue/laravel-options:^4.0
 ```
 
 ### Publish configuration and migrations

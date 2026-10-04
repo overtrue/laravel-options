@@ -7,9 +7,7 @@ use Overtrue\LaravelOptions\Contracts\OptionProvider;
 
 class EloquentProvider implements OptionProvider
 {
-    public function __construct(protected Model $option)
-    {
-    }
+    public function __construct(protected Model $option) {}
 
     public function has(string $key): bool
     {

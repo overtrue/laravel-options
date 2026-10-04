@@ -1,5 +1,7 @@
 <?php
 
+use Overtrue\LaravelOptions\Option;
+
 return [
     'defaults' => [
         'provider' => 'eloquent',
@@ -8,7 +10,7 @@ return [
     'providers' => [
         'eloquent' => [
             'driver' => 'eloquent',
-            'model' => \Overtrue\LaravelOptions\Option::class,
+            'model' => Option::class,
         ],
     ],
 ];

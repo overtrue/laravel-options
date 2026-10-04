@@ -2,6 +2,4 @@
 
 namespace Overtrue\LaravelOptions\Events;
 
-class OptionUpdated extends Event
-{
-}
+class OptionUpdated extends Event {}

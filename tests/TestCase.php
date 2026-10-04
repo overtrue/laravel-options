@@ -2,6 +2,7 @@
 
 namespace Overtrue\LaravelOptions\Test;
 
+use Illuminate\Foundation\Application;
 use Overtrue\LaravelOptions\Facade;
 use Overtrue\LaravelOptions\OptionsServiceProvider;
 
@@ -10,7 +11,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      */
     protected function getEnvironmentSetUp($app)
     {
@@ -29,7 +30,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Setup the test environment.
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -39,7 +40,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Get package providers.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      * @return array
      */
     protected function getPackageProviders($app)
@@ -52,7 +53,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Get package aliases.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      * @return array
      */
     protected function getPackageAliases($app)
